@@ -1,5 +1,8 @@
 import os
 import urllib.parse
+from dotenv import load_dotenv
+
+load_dotenv()
 
 LOGIN = os.getenv("KBTU_LOGIN", "")
 PASSWORD = os.getenv("KBTU_PASSWORD", "")

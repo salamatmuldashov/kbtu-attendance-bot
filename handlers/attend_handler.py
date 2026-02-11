@@ -24,6 +24,18 @@ def attend_loop(portal: str):
     LOGIN_URL, ATTEND_URL = get_portal_urls(portal)
     try:
         driver.get(LOGIN_URL)
+        time.sleep(2)
+        
+        # Устанавливаем cookie для русского языка
+        driver.add_cookie({
+            'name': 'r5-locale',
+            'value': 'ru',
+            'domain': 'pge.kbtu.kz' if portal != "wsp" else 'wsp.kbtu.kz',
+            'path': '/'
+        })
+        print("Cookie r5-locale=ru установлен")
+        
+        driver.get(LOGIN_URL)
         wait = WebDriverWait(driver, 120)
         login_btn = wait.until(EC.element_to_be_clickable(
             (By.XPATH, "//span[text()='Вход']/ancestor::div[contains(@class, 'v-button')]")

@@ -29,7 +29,7 @@
 
 1. Клонируйте проект:
     ```bash
-    git clone https://github.com/your-username/kbtu-attendance-bot.git
+    git clone https://github.com/gabdylgaziz/kbtu-attendance-bot.git
     cd kbtu-attendance-bot
     ```
 
@@ -37,18 +37,18 @@
     ```bash
     pip install -r requirements.txt
     ```
-    > Для работы нужен установленный [Google Chrome](https://www.google.com/chrome/) и [ChromeDriver](https://chromedriver.chromium.org/downloads)
+    > Для работы нужен установленный [Google Chrome](https://www.google.com/chrome/) и [ChromeDriver](https://chromedriver.chromium.org/downloads) (ВАЖНО: версия браузера и драйвера должна быть совместимой, например: Google Chrome: 145.0.7632.46 и chromedriver: 145.0.7632.45)
 
 3. Укажите логин и пароль (KBTU):
     - Создайте файл `.env`:
       ```
-      LOGIN=ваш_логин
-      PASSWORD=ваш_пароль
+      KBTU_LOGIN=ваш_логин
+      KBTU_PASSWORD=ваш_пароль
       ```
     - **ИЛИ** экспортируйте переменные окружения:
       ```bash
-      export LOGIN=ваш_логин
-      export PASSWORD=ваш_пароль
+      export KBTU_LOGIN=ваш_логин
+      export KBTU_PASSWORD=ваш_пароль
       ```
 
 ---

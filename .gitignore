@@ -71,3 +71,6 @@ desktop.ini
 *.db
 *.tmp
 *.bak
+
+# chromedriver
+chromedriver
