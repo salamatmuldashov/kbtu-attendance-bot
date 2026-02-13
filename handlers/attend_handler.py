@@ -35,7 +35,7 @@ def attend_loop(portal: str):
         })
         print("Cookie r5-locale=ru установлен")
         
-        driver.get(LOGIN_URL)
+        driver.refresh()
         wait = WebDriverWait(driver, 120)
         login_btn = wait.until(EC.element_to_be_clickable(
             (By.XPATH, "//span[text()='Вход']/ancestor::div[contains(@class, 'v-button')]")
